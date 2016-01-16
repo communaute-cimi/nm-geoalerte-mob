@@ -1,0 +1,43 @@
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+body {
+    padding-top: 50px;
+    background-color: @body-bg;
+}
+
+.ios7 .ui-page {
+    top: 69px !important;
+}
+
+.desktop .ui-page {
+    @media(min-width: @screen-lg-min) {
+        top: 0 !important;
+    }
+}
+
+.ui-content {
+    padding: 0 !important;
+}
+
+// On supprime les liens soulignés
+a {
+    &,&:visited,&:focus,&:hover {
+        text-decoration: none !important;
+    }
+}
+
+
+/*
+ * Element conteneur de haut niveau sans le padding
+ */
+.main.container {
+    @media(min-width: @screen-lg-min) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+

@@ -1,0 +1,22 @@
+body #masterPage > div {
+  /*-webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;*/
+  height: 100% !important;
+  display: table;
+}
+body #mainpage {
+  display: table-cell;
+  vertical-align: middle;
+}
+body #mainpage .container {
+  padding: 5px;
+}
+body #mainpage .header {
+  height: 10px;
+}
+body .header {
+  display: absolute;
+  top: 0px;
+  width: 100%;
+}

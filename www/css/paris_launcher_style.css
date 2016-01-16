@@ -1,0 +1,16 @@
+#loadingGroup {
+  display: table;
+  width: 100%;
+  text-align: center;
+  margin-top: 10%;
+}
+#loadingGroup #loadingSpinner {
+  width: 32px;
+  height: 32px;
+}
+#loadingGroup #loadingMessage {
+  margin-top: 10px;
+}
+#loadingGroup #fioriForm {
+  display: none;
+}

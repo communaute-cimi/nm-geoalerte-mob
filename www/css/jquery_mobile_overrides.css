@@ -1,0 +1,52 @@
+.ui-mobile .ui-page {
+  height: auto !important;
+  /* overriding jquery mobile behaviour that sets a wrong min-height inline */
+  min-height: 0px !important;
+  padding-top: 5px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  overflow-x: hidden;
+  -ms-scroll-chaining: none;
+  -ms-overflow-style: none;
+  -ms-touch-action: cross-slide-y;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.desktop .ui-page {
+  width: auto;
+}
+.ios7 .ui-page,
+.ios6 .ui-page {
+  -webkit-overflow-scrolling: touch !important;
+  -ms-overflow-scrolling: touch !important;
+  -moz-overflow-scrolling: touch !important;
+  overflow-scrolling: touch !important;
+  overflow: scroll !important;
+}
+.ios7 .ui-page > *,
+.ios6 .ui-page > * {
+  -webkit-transform: translate3d(0, 0, 999999);
+  -moz-transform: translate3d(0, 0, 999999);
+  -o-transform: translate3d(0, 0, 999999);
+  -ms-transform: translate3d(0, 0, 999999);
+  transform: translate3d(0, 0, 999999);
+}
+.android .ui-page.ui-page-active,
+.wp8 .ui-page.ui-page-active {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 999999);
+  -moz-transform: translate3d(0, 0, 999999);
+  -o-transform: translate3d(0, 0, 999999);
+  -ms-transform: translate3d(0, 0, 999999);
+  transform: translate3d(0, 0, 999999);
+}
