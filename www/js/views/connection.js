@@ -12,11 +12,16 @@
 			 	_.bindAll(this, 'render');
 			    this.delegateEvents();
 				this.renderData();
+                this.shouldShowAlert = options.alert;
 		},
 		render : function() {
 			var that = this;
-
-			$(this.el).append(_.template(tmpPage));
+            if (this.shouldShowAlert) {
+			    $(this.el).append(_.template(tmpPage, {alert: MyApp.currentAlert}));
+            }
+            else {
+                $(this.el).append(_.template(tmpPage, {}));
+            }
 			return this.el;
 		},
         connection : function() {
@@ -24,10 +29,13 @@
                 text: "",
                 textVisible: true,
                 theme: "z",
-                html: "<div class='spinner'>Chargement de votre réservation</div>"
+                html: "<div class='spinner'></div>"
                 });
+            // fix a bug with jQuery mobile
+            $(".ui-loader").css("display", "");
             window.setTimeout(function(){
-                $.mobile.loading( "hide");
+                $.mobile.loading().hide();
+                $(".ui-loader").css("display", "none");
             }, 1000);
         }
 	});

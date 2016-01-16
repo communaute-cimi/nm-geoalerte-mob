@@ -6516,6 +6516,23 @@ body #couverts .image-content #cliquable-couverts {
   width: 100%;
   height: 100%;
 }
+body #couverts #close-button {
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  margin-top: -4px;
+  margin-left: 285px;
+}
+body #couverts #consignes {
+  height: 56px;
+  width: 100%;
+  margin-top: 306px;
+}
+body #couverts #signal {
+  height: 56px;
+  width: 100%;
+  margin-top: 16px;
+}
 body #connection {
   display: table-cell;
   vertical-align: middle;
@@ -6550,8 +6567,18 @@ body .container {
   height: 100%;
   overflow-y: scroll;
 }
+body .alert {
+  background: url('../images/alerte4.png') no-repeat;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 484px;
+  background-size: cover;
+}
 .spinner {
-  background-image: url('../images/ajax-loader2.gif') no-repeat;
+  background: url('../images/ajax-loader2.gif') no-repeat;
+  height: 60px;
+  width: 297px;
 }
 @-webkit-viewport {
   width: device-width;
@@ -6662,6 +6689,7 @@ a:hover {
   height: 58px !important;
   background: transparent;
   border: none;
+  margin-left: -157px;
 }
 /**
  *   Import the file for the launcher
