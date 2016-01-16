@@ -6288,6 +6288,88 @@ button.close {
     display: none !important;
   }
 }
+/****************************
+  From : http://codepen.io/alademann/pen/phcAa
+*****************************/
+/****************************
+  GLOBAL VARS
+*****************************/
+/****************************
+  ANIMATIONS
+*****************************/
+.ui-spinner {
+  /****************************
+    ANDROID SPINNER
+    *****************************/
+  /****************************
+    GLOBAL STYLES
+    *****************************/
+  /* position spinner in the middle of the page for demonstration */
+}
+@keyframes clockwise {
+  to {
+    transform: rotate(360deg) translatez(0);
+  }
+}
+@keyframes counter-clockwise {
+  to {
+    transform: rotate(-360deg) translatez(0);
+  }
+}
+.ui-spinner .progress-spinner {
+  height: 44px;
+  width: 44px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgba(112, 112, 112, 0.75) rgba(36, 36, 36, 0.25) rgba(36, 36, 36, 0.25) rgba(36, 36, 36, 0.25);
+  border-radius: 100%;
+  animation: clockwise 0.75s linear infinite;
+}
+.ui-spinner *,
+.ui-spinner *:before,
+.ui-spinner *:after {
+  box-sizing: border-box;
+}
+.ui-spinner body {
+  padding: 10px;
+}
+.ui-spinner *:before,
+.ui-spinner *:after {
+  content: '';
+}
+.ui-spinner ul {
+  list-style: none;
+  width: 100%;
+}
+.ui-spinner li {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  width: calc(10%);
+  height: 100px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  /*  background-color: #f3f3f3;
+        box-shadow:
+        inset 0 1px 3px rgba(#595959, .4),
+                0 0   1px rgba(#595959, .4);
+        border-radius: 5px;*/
+  overflow: hidden;
+}
+.ui-spinner li:nth-of-type(5n+1) {
+  margin-left: 0;
+}
+.ui-spinner li > * {
+  position: relative;
+  align-self: center;
+}
+.ui-spinner .progress-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -22px;
+  margin-top: -22px;
+}
 /*
  * Import of less files for the project
  */
@@ -6304,20 +6386,172 @@ body #masterPage > div {
   height: 100% !important;
   display: table;
 }
+body .header {
+  top: 0px;
+  position: absolute;
+  width: 100%;
+}
 body #mainpage {
   display: table-cell;
   vertical-align: middle;
 }
-body #mainpage .container {
-  padding: 5px;
-}
 body #mainpage .header {
-  height: 10px;
+  height: 53px;
+  background: url('../images/mainheader.jpg') no-repeat;
+  background-size: cover;
+}
+body #mainpage .image-content {
+  width: 100%;
+  background: url('../images/page1.png') no-repeat;
+  background-size: cover;
+  height: 1174px;
+  margin-top: 44px;
+}
+body #mainpage .image-content #cliquable-restaurant {
+  width: 100%;
+  height: 100%;
+}
+body #restaurant {
+  display: table-cell;
+  vertical-align: middle;
+}
+body #restaurant .header {
+  height: 53px;
+  background: url('../images/restaurantheader.jpg') no-repeat;
+  background-size: cover;
+}
+body #restaurant .image-content {
+  width: 100%;
+  background: url('../images/page2.png') no-repeat;
+  background-size: cover;
+  height: 3393px;
+  margin-bottom: 51px;
+}
+body #restaurant #booking-button {
+  position: absolute;
+  bottom: 0px;
+  margin: 5px;
+  width: 350px;
+  height: 51px;
+  background: url('../images/btn-la-fourchette.png') no-repeat;
+  background-size: cover;
+}
+body #offres {
+  display: table-cell;
+  vertical-align: middle;
+}
+body #offres .header {
+  height: 93px;
+  background: url('../images/offerheader.jpg') no-repeat;
+  background-size: cover;
+}
+body #offres .image-content {
+  width: 100%;
+  background: url('../images/page3.png') no-repeat;
+  background-size: cover;
+  height: 845px;
+  margin-top: 0px;
+}
+body #offres .image-content #cliquable-offer {
+  width: 100%;
+  height: 100%;
+}
+body #date {
+  display: table-cell;
+  vertical-align: middle;
+}
+body #date .header {
+  height: 93px;
+  background: url('../images/dateheader.jpg') no-repeat;
+  background-size: cover;
+}
+body #date .image-content {
+  width: 100%;
+  background: url('../images/page4.png') no-repeat;
+  background-size: cover;
+  height: 552px;
+  margin-top: 0px;
+}
+body #date .image-content #cliquable-date {
+  width: 100%;
+  height: 100%;
+}
+body #heure {
+  display: table-cell;
+  vertical-align: middle;
+}
+body #heure .header {
+  height: 93px;
+  background: url('../images/hourheader.jpg') no-repeat;
+  background-size: cover;
+}
+body #heure .image-content {
+  width: 100%;
+  background: url('../images/page5.png') no-repeat;
+  background-size: cover;
+  height: 552px;
+  margin-top: 0px;
+}
+body #heure .image-content #cliquable-heure {
+  width: 100%;
+  height: 100%;
+}
+body #couverts {
+  display: table-cell;
+  vertical-align: middle;
+}
+body #couverts .header {
+  height: 93px;
+  background: url('../images/couvertsheader.jpg') no-repeat;
+  background-size: cover;
+}
+body #couverts .image-content {
+  width: 100%;
+  background: url('../images/page6.png') no-repeat;
+  background-size: cover;
+  height: 552px;
+  margin-top: 0px;
+}
+body #couverts .image-content #cliquable-couverts {
+  width: 100%;
+  height: 100%;
+}
+body #connection {
+  display: table-cell;
+  vertical-align: middle;
+}
+body #connection .image-content {
+  width: 100%;
+  background: url('../images/page7.png') no-repeat;
+  background-size: cover;
+  height: 552px;
+  margin-top: 0px;
+}
+body #connection .image-content #cliquable-connection {
+  width: 100%;
+  height: 100%;
+}
+body #connection .image-content #mail-input {
+  margin-top: 219px;
+  margin-left: 18px;
+  border: none;
+}
+body #connection .image-content #mail-input:focus {
+  outline: none;
 }
 body .header {
   display: absolute;
   top: 0px;
   width: 100%;
+  height: 159px;
+}
+body .container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.spinner {
+  background-image: url('../images/ajax-loader2.gif') no-repeat;
 }
 @-webkit-viewport {
   width: device-width;
@@ -6358,11 +6592,9 @@ a:hover {
 /*
  * Element conteneur de haut niveau sans le padding
  */
-@media (min-width: 1280px) {
-  .main.container {
-    padding-left: 0;
-    padding-right: 0;
-  }
+.container {
+  padding-left: 0;
+  padding-right: 0;
 }
 .ui-mobile .ui-page {
   height: auto !important;
@@ -6415,6 +6647,21 @@ a:hover {
   -o-transform: translate3d(0, 0, 999999);
   -ms-transform: translate3d(0, 0, 999999);
   transform: translate3d(0, 0, 999999);
+}
+.ui-page {
+  padding-top: 0px !important;
+}
+.ui-input-text {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+.ui-input-text.ui-focus {
+  box-shadow: none !important;
+}
+.ui-loader {
+  height: 58px !important;
+  background: transparent;
+  border: none;
 }
 /**
  *   Import the file for the launcher

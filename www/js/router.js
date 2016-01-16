@@ -80,7 +80,7 @@ define(['jquery', 'underscore', 'backbone', 'analytics'], function($, _, Backbon
 					transition = 'slide';
 				}
 			}else{
-				transition = 'none';
+				transition = 'slide';
 				MyApp.notFirstPage = true;
 			}
 

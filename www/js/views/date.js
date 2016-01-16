@@ -5,6 +5,7 @@
 		transition: 'fade',
 		error: undefined,
 		events: {
+            "click #cliquable-date" : 'navigate'
 		},
 		initialize : function(options) {
 			 	this.events = _.extend({}, this.genericEvents, this.events);
@@ -17,7 +18,10 @@
 
 			$(this.el).append(_.template(tmpPage));
 			return this.el;
-		}
+		},
+        navigate: function(){
+            MyApp.Router.navigate("heure", {trigger: true});
+        }
 	});
 
 	return view;

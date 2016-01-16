@@ -5,6 +5,8 @@
 		transition: 'fade',
 		error: undefined,
 		events: {
+            "click .header" : 'goBack',
+            "click #booking-button" : 'navigate'
 		},
 		initialize : function(options) {
 			 	this.events = _.extend({}, this.genericEvents, this.events);
@@ -17,7 +19,14 @@
 
 			$(this.el).append(_.template(tmpPage));
 			return this.el;
-		}
+		},
+		goBack : function() {
+			MyApp.reversePage = true;
+			window.history.back();
+		},
+        navigate: function(){
+            MyApp.Router.navigate("offres", {trigger: true});
+        }
 	});
 
 	return view;

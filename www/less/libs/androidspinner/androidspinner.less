@@ -1,0 +1,89 @@
+/****************************
+  From : http://codepen.io/alademann/pen/phcAa
+*****************************/
+/****************************
+  GLOBAL VARS
+*****************************/
+/****************************
+  ANIMATIONS
+*****************************/
+.ui-spinner{
+    
+    @keyframes clockwise {
+    to {
+        transform: rotate(360deg) translatez(0);
+    }
+    }
+    @keyframes counter-clockwise {
+    to {
+        transform: rotate(-360deg) translatez(0);
+    }
+    }
+    /****************************
+    ANDROID SPINNER
+    *****************************/
+    .progress-spinner {
+    height: 44px;
+    width: 44px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(112, 112, 112, 0.75) rgba(36, 36, 36, 0.25) rgba(36, 36, 36, 0.25) rgba(36, 36, 36, 0.25);
+    border-radius: 100%;
+    animation: clockwise 0.75s linear infinite;
+    }
+
+    /****************************
+    GLOBAL STYLES
+    *****************************/
+    *, *:before, *:after {
+    box-sizing: border-box;
+    }
+
+    body {
+    padding: 10px;
+    }
+
+    *:before, *:after {
+    content: '';
+    }
+
+    ul {
+    list-style: none;
+    width: 100%;
+    }
+
+    li {
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    width: calc(20% - (10px * (5 / 5)));
+    height: 100px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    /*  background-color: #f3f3f3;
+        box-shadow:
+        inset 0 1px 3px rgba(#595959, .4),
+                0 0   1px rgba(#595959, .4);
+        border-radius: 5px;*/
+    overflow: hidden;
+    }
+
+    li:nth-of-type(5n+1) {
+    margin-left: 0;
+    }
+
+    li > * {
+    position: relative;
+    align-self: center;
+    }
+
+    /* position spinner in the middle of the page for demonstration */
+    .progress-spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -22px;
+    margin-top: -22px;
+    }
+
+}

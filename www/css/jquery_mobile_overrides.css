@@ -50,3 +50,18 @@
   -ms-transform: translate3d(0, 0, 999999);
   transform: translate3d(0, 0, 999999);
 }
+.ui-page {
+  padding-top: 0px !important;
+}
+.ui-input-text {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+.ui-input-text.ui-focus {
+  box-shadow: none !important;
+}
+.ui-loader {
+  height: 58px !important;
+  background: transparent;
+  border: none;
+}
