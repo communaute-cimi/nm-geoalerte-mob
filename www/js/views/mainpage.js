@@ -21,7 +21,7 @@
                 var that = this;
                 navigator.geolocation.getCurrentPosition(function(position){
                     $.ajax({
-                        url: 'http:///v1/alerts/' + position.coords.latitude + '/' + position.coords.longitude,
+                        url: 'http://www.geoalerte.info/v1/alerts/' + position.coords.latitude + '/' + position.coords.longitude,
                         type:'GET',
                         success: function (data) {
                             if(data !== undefined && data.length != 0){
