@@ -13,6 +13,13 @@
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="4000" />
     <platform name="android">
+    <icon src="res/android/ldpi.png" density="ldpi" />
+    
+        <icon src="www/res/icons/android/ldpi.png" density="ldpi" />
+        <icon src="www/res/icons/android/mdpi.png" density="mdpi" />
+        <icon src="www/res/icons/android/hdpi.png" density="hdpi" />
+        <icon src="www/res/icons/android/xhdpi.png" density="xhdpi" />
+              
         <!-- you can use any density that exists in the Android project -->
 
         <splash src="www/res/screens/android/screen-hdpi-portrait.png" density="port-hdpi"/>

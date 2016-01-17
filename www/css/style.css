@@ -6516,23 +6516,6 @@ body #couverts .image-content #cliquable-couverts {
   width: 100%;
   height: 100%;
 }
-body #couverts #close-button {
-  height: 45px;
-  width: 45px;
-  position: absolute;
-  margin-top: -4px;
-  margin-left: 285px;
-}
-body #couverts #consignes {
-  height: 56px;
-  width: 100%;
-  margin-top: 306px;
-}
-body #couverts #signal {
-  height: 56px;
-  width: 100%;
-  margin-top: 16px;
-}
 body #connection {
   display: table-cell;
   vertical-align: middle;
@@ -6572,13 +6555,32 @@ body .alert {
   position: fixed;
   top: 50px;
   width: 100%;
-  height: 484px;
-  background-size: cover;
+  height: 800px;
+  background-size: contain;
+}
+body #close-button {
+  height: 45px;
+  width: 360px;
+  position: absolute;
+  margin-top: -4px;
+}
+body #consignes {
+  height: 56px;
+  width: 100%;
+  margin-top: 306px;
+}
+body #signal {
+  height: 56px;
+  width: 100%;
+  margin-top: 16px;
 }
 .spinner {
   background: url('../images/ajax-loader2.gif') no-repeat;
   height: 60px;
   width: 297px;
+}
+.hidden {
+  display: none;
 }
 @-webkit-viewport {
   width: device-width;

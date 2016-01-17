@@ -38,7 +38,7 @@
             this.signalSent = true;
             this.displaySecurity = false;
             $('.alert').css('background', "url('images/alerte4-step3.png') no-repeat");
-            $('.alert').css('background-size', "cover");
+            $('.alert').css('background-size', "contain");
         },
         displaySecurity: function(){
             if(this.displaySecurity) {
@@ -57,7 +57,7 @@
                     $('.alert').css('background', "url('images/alerte4.png') no-repeat");
                 }
             }
-            $('.alert').css('background-size', "cover");
+            $('.alert').css('background-size', "contain");
             this.displaySecurity = !this.displaySecurity;
         },
         hidePopup: function(){

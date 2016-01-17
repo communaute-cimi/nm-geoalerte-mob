@@ -48,10 +48,6 @@ define(['jquery', 'underscore', 'backbone', 'router', 'utils/storageConnector',
 				MyApp.events(); //register event handler
 				Backbone.history.start();
 				console.log('App initialized');
-                
-                navigator.geolocation.getCurrentPosition(function(){
-                    console.log('geolocation OK');
-                });
 			});
 		}, 
 		events : function (){
