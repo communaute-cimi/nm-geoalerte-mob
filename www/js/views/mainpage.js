@@ -5,7 +5,10 @@
 		transition: 'fade',
 		error: undefined,
 		events: {
-            "click #cliquable-restaurant" : 'navigate'
+            "click #cliquable-restaurant" : 'navigate',
+            "click #signal" : 'signal',
+            "click #consignes" : 'displaySecurity',
+            "click #close-button" : 'hidePopup',
 		},
 		initialize : function(options) {
 			 	this.events = _.extend({}, this.genericEvents, this.events);
@@ -21,7 +24,9 @@
                         url: 'http:///v1/alerts/' + position.coords.latitude + '/' + position.coords.longitude,
                         type:'GET',
                         success: function (data) {
-                            $('#alert').removeClass('hidden');
+                            if(data !== undefined && data.length != 0){
+                                $('.alert').removeClass('hidden');
+                            }
                         }
                     });
                     console.log('geolocation OK');
@@ -39,27 +44,25 @@
         signal: function(){
             this.signalSent = true;
             this.displaySecurity = false;
-            $('.alert').css('background', "url('images/alerte4-step3.png') no-repeat");
-            $('.alert').css('background-size', "contain");
+            $('#alert-image').attr('src', 'images/alerte4-step3.png');
         },
         displaySecurity: function(){
             if(this.displaySecurity) {
                 if(this.signalSent) {
-                    $('.alert').css('background', "url('images/alerte4-step4.png') no-repeat");
+                    $('#alert-image').attr('src', 'images/alerte4-step4.png');
                 }
                 else {
-                    $('.alert').css('background', "url('images/alerte4-step2.png') no-repeat");
+                    $('#alert-image').attr('src', 'images/alerte4-step2.png');
                 }
             }
             else {
                 if(this.signalSent) {
-                    $('.alert').css('background', "url('images/alerte4-step3.png') no-repeat");
+                    $('#alert-image').attr('src', 'images/alerte4-step3.png');
                 }
                 else {
-                    $('.alert').css('background', "url('images/alerte4.png') no-repeat");
+                    $('#alert-image').attr('src', 'images/alerte4.png');
                 }
             }
-            $('.alert').css('background-size', "contain");
             this.displaySecurity = !this.displaySecurity;
         },
         hidePopup: function(){

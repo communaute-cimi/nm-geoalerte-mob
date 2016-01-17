@@ -33,6 +33,7 @@ define(['jquery', 'underscore', 'backbone', 'router', 'utils/storageConnector',
 			$(document).ready(function() {
 				console.log('App initialization...');
 				
+                MyApp.shouldDisplayAlert = true;
 				if (StorageConnector)
 					MyApp.storageConnector = new StorageConnector(); 
 				if (configuration)

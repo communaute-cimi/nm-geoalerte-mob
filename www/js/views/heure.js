@@ -1,6 +1,4 @@
-﻿var shouldDisplayAlert = false;
-
-define(['jquery', 'underscore', 'backbone', 'helper', 'generic',
+﻿define(['jquery', 'underscore', 'backbone', 'helper', 'generic',
         'text!templates/heure.html'],
         function($, _, Backbone, Helper, GenericView, tmpPage) {
 	var view = GenericView.extend({
@@ -30,10 +28,10 @@ define(['jquery', 'underscore', 'backbone', 'helper', 'generic',
             // fix a bug with jQuery mobile
             $(".ui-loader").css("display", "");
             window.setTimeout(function(){
-                shouldDisplayAlert = !shouldDisplayAlert;
                 $.mobile.loading().hide();
                 $(".ui-loader").css("display", "none");
-                if(shouldDisplayAlert){
+                MyApp.shouldDisplayAlert = !MyApp.shouldDisplayAlert;
+                if(!MyApp.shouldDisplayAlert){
                     MyApp.Router.navigate("couverts/yes", {trigger: true});
                 }
                 else {

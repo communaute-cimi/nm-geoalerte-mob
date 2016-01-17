@@ -15,9 +15,9 @@
 			 	_.bindAll(this, 'render');
                 _.bindAll(this, 'signal');
                 _.bindAll(this, 'displaySecurity');
+                this.alert = options.alert;
 			    this.delegateEvents();
 				this.renderData();
-                this.alert = options.alert;
                 this.signalSent = false;
                 this.displaySecurity = false;
 		},
@@ -27,7 +27,7 @@
 			     $(this.el).append(_.template(tmpPage, {alert: 'yes'}));
             }
             else{
-                $(this.el).append(_.template(tmpPage, {}));
+                $(this.el).append(_.template(tmpPage, {alert: 'no'}));
             }
 			return this.el;
 		},
@@ -37,27 +37,25 @@
         signal: function(){
             this.signalSent = true;
             this.displaySecurity = false;
-            $('.alert').css('background', "url('images/alerte4-step3.png') no-repeat");
-            $('.alert').css('background-size', "contain");
+            $('#alert-image').attr('src', 'images/alerte4-step3.png');
         },
         displaySecurity: function(){
             if(this.displaySecurity) {
                 if(this.signalSent) {
-                    $('.alert').css('background', "url('images/alerte4-step4.png') no-repeat");
+                    $('#alert-image').attr('src', 'images/alerte4-step4.png');
                 }
                 else {
-                    $('.alert').css('background', "url('images/alerte4-step2.png') no-repeat");
+                    $('#alert-image').attr('src', 'images/alerte4-step2.png');
                 }
             }
             else {
                 if(this.signalSent) {
-                    $('.alert').css('background', "url('images/alerte4-step3.png') no-repeat");
+                    $('#alert-image').attr('src', 'images/alerte4-step3.png');
                 }
                 else {
-                    $('.alert').css('background', "url('images/alerte4.png') no-repeat");
+                    $('#alert-image').attr('src', 'images/alerte4.png');
                 }
             }
-            $('.alert').css('background-size', "contain");
             this.displaySecurity = !this.displaySecurity;
         },
         hidePopup: function(){
